@@ -1,0 +1,79 @@
+Terraform Infraestructura como codigo
+
+
+Terraform se coloca en el medio entre nuestra target api (cloud provider)
+con un herramienta llamda terraform provider
+
+podemos automizar la infra, estandarizarla, admin, colaborar entre varios la misma infra.
+
+Basicamente con terraform hacemos las config e nuestra nube y la creamos,
+y nos quita la necesidad de crear la infra medinate la interfaz de AWS ejemplo o de cualquier
+otro proveedor en nube.
+
+
+si queremos un dia replicar la infra ya hecha, en vez de hacer todos llos pasos por interfaz lo unico
+que debemos hacer e usar las configuraciones ya armadas con terraform.
+
+
+
+Desde AWS
+generamos un user desde iam para usarlo en terraform
+este user tiene acceso a la consola y generamos su par de claves.
+
+
+Generar alias
+
+alias tf="terraform"
+
+Comandos
+
+Tf init
+descarga toda la info que requiere el provider.
+Los dos archivos generados no los tocamos para nada, la carpeta guarda toda la info de los providers y modulos que descargemos
+el terraform lock hcl guarda el estado.
+
+tf fmt
+establece un formateo estandar en los archivos de terraform.
+
+
+Un recurso en tf, es algo que puedes crear con la api de tu cloud provider.
+En este caso con AWS generamos una instancia EC2.
+
+tf plan
+nos brinda informacion del plan a ejecutar de las config que armamos
+
+seguido a esto si queremos aplicar usamos 
+tf apply (pregunta de nuevo para confirmar)
+tf apply -auto-approve
+
+
+FUNCTIONS
+
+Podemos usar funciones como en un lenguaje de programacion.
+Ejemplo usar un ciclo for, para poder iterar la creacion de ciertos recursos
+Crear 3 instancias ec2 con casi las mismas variables. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
