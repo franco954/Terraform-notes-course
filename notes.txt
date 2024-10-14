@@ -62,11 +62,14 @@ basicamente hay gente que ya armo todas las lamadas a la api por determinado tem
 y esto lo agrupo y subio en modulos de tf para que todos puedan consumirlos.
 
 
-se pueden generar varios espacios de trabajo, siempre chequear en cual estamos con list..
+se pueden generar varios espacios de trabajo, siempre chequear en cual estamos con list.
 
 tf workspace new prod
 tf workspace list
 
+moverme entre workspace
+
+tf workspace select test
 
 
 
