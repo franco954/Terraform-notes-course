@@ -29,6 +29,9 @@ resource "aws_instance" "example" {
 
   ami           = "ami-011899242bb902164"
   instance_type = "t2.micro"
+  subnet_id = module.vpc.public_subnets[0]
+  vpc_security_group_ids = [module.terraform-sg.security_group_id]
+  associate_public_ip_address = true
   tags = {
     extra_tag = local.extra_tag
     Name = "EC2-${each.key}"

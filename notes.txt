@@ -55,9 +55,17 @@ Crear 3 instancias ec2 con casi las mismas variables.
 
 
 
+MODULOS
+
+Agrupacion a las llamadas de la api
+basicamente hay gente que ya armo todas las lamadas a la api por determinado tema ejemplo una vpc o sg.
+y esto lo agrupo y subio en modulos de tf para que todos puedan consumirlos.
 
 
+se pueden generar varios espacios de trabajo, siempre chequear en cual estamos con list..
 
+tf workspace new prod
+tf workspace list
 
 
 
